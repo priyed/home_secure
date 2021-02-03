@@ -16,11 +16,23 @@ header {
 }
 
 .header-wrapper {
-  height: 95vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom,rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.226)), url(./assets/hero_image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.logo-box {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
 }
 
 /* Start Navigation styles */
@@ -118,6 +130,7 @@ li a:hover, li a:focus {
 
 /* End Navigation styles */
 
+/* Start Header styles */
 .text-box {
   position: absolute;
   top: 50%;
@@ -138,10 +151,17 @@ li a:hover, li a:focus {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   background-color: rgb(107, 235, 207);
-  padding: 0.8em 3em;
+  padding: 1em 2.7em;
+  border: 2px solid rgb(107, 235, 207);
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
+
+.text-box a:hover {
+  background-color: transparent;
+}
+
+/* End Header styles */

@@ -5,7 +5,7 @@ import "./App.css";
 const Navigation = () => (
   <>
     <nav>
-      <div className="logo-box"></div>
+      <div className="logo-box">YSecure</div>
         <ul className="navbar" id="navbar">
           <li>
             <a href="#how-it-works">How it works</a>
@@ -53,10 +53,19 @@ const Header = () => (
   </header>
 );
 
+const Main = () => (
+  <main>
+    <div className="main-wrapper">
+      <h1>This where it all begins</h1>
+    </div>
+  </main>
+)
+
 function App() {
   return (
     <div className="App">
       <Header />
+      <Main />
     </div>
   );
 }
