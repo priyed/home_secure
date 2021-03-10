@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html, body {
@@ -20,24 +21,12 @@ html, body {
   color: #0a0a0a;
 }
 
-header {
-  text-align: center;
-  position: relative;
-}
 
-.header-wrapper {
-  height: 100vh;
-  background-image: linear-gradient(to right bottom,rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.226)), url(./assets/hero_image.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+/* Start Navigation styles */
 .logo-box {
   position: absolute;
   top: 30px;
-  left: 20px;
+  left: 30px;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -46,7 +35,6 @@ header {
   text-transform: uppercase;
 }
 
-/* Start Navigation styles */
 nav a {
   text-transform: uppercase;
 }
@@ -55,7 +43,7 @@ nav a {
   cursor: pointer;
   position: absolute;
   top: 25px;
-  right: 20px;
+  right: 30px;
   width: 32px;
   height: 32px;
   padding: 2px;
@@ -101,7 +89,7 @@ nav ul li {
 
 li a {
   text-align: left;
-  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
   color: whitesmoke;
   font-weight: bold;
   font-size: 1.2rem;
@@ -109,6 +97,7 @@ li a {
   text-decoration: none;
   border-bottom: 1px solid rgb(107, 235, 207);
   padding-bottom: 0.3em;
+  transition: all 0.4s ease-in-out;
 }
 
 li a:hover, li a:focus {
@@ -140,6 +129,20 @@ li a:hover, li a:focus {
 /* End Navigation styles */
 
 /* Start Header styles */
+header {
+  text-align: center;
+  position: relative;
+}
+
+.header-wrapper {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom,rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.226)), url(./assets/hero_image.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .text-box {
   position: absolute;
   top: 50%;
@@ -148,10 +151,10 @@ li a:hover, li a:focus {
   margin: 30px auto;
 }
 
-.heading-primary {
+.heading-primary h1{
   color: #fff;
   display: block;        
-  font-size: 3.1em;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 5px;
   margin-bottom: 50px;
@@ -212,8 +215,13 @@ li a:hover, li a:focus {
 
 }
 
-.features-intro, .features p, .video-section p, .subscribe-section p  {
+.features-intro p, .features p, .video-section p, .subscribe-section p  {
   line-height: 28px;
+}
+
+.features-intro, .video-section p {
+  max-width: 50ch;
+  margin: auto;
 }
 
 .features {
@@ -374,6 +382,7 @@ hr {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: 20px;
 }
 
 .contacts-wrap h3 {
@@ -442,6 +451,7 @@ form button {
   outline: none;
   padding: 16px 15px;
   margin-bottom: 50px;
+  width: 100%;
   margin-top: 20px;
   border: 2px solid rgb(83, 216, 187);
   border-radius: 5px;
@@ -461,3 +471,76 @@ form button:active {
 }
 
 /* End main section styles */
+
+/* Start footer styles */
+.footer-container {
+  background-color: #292F35;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-container p {
+  font-size: 13px;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+/* End footer styles */
+
+/*media queries */
+@media screen and (min-width: 720px) {
+
+  .close, .hamburger, .mobile-nav {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+  }
+
+  .desktop-menu a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .desktop-menu a:hover {
+    color: #ccc;
+  }
+
+  .desktop-menu a:last-of-type {
+    color: black;
+    font-size: 13px;
+  }
+
+  .desktop-menu a:last-of-type:hover {
+    color: #f1f1f1;
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+  .heading-primary h1 {
+    font-size: 3.2em;
+  }
+
+  .logo-box {
+    left: 50px;
+  }
+
+  .desktop-menu {
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
